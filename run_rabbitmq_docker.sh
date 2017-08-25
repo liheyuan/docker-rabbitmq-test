@@ -1,7 +1,7 @@
 #!/bin/bash
 NODE_NAME="node-rabbitmq"
 DOCKER_NAME="sbmvt-rabbit"
-VOLUME_DATA="$HOME/docker_data/rabbitmq"
+VOLUME_DATA='/var/lib/boot2docker/docker_data/rabbitmq'
 eval $(docker-machine env $NODE_NAME)
 last_id=$(docker ps -l -q)
 docker rm -f $last_id
